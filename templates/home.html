@@ -1,12 +1,11 @@
-<!DOCTYPE html>                             
+<!DOCTYPE html>
 <html>
 <head>
     <title>Customer churn Predictor</title>
 </head>
 <body>
-    <h1><center>Customer Churn Predictor </center></h1>
+    <h1><center>Customer Churn Predictor</center></h1>
     <p style="font-size: 20px;"><center>Please enter details:</center></p> 
-
 
     <div class="box">
         <form action="{{ url_for('predict') }}" method="POST">
@@ -60,11 +59,8 @@
             
             <label for="TotalCharges" style="display: inline-block; margin-left: 10px;">TotalCharges:</label>
             <input type="number" id="TotalCharges" name="TotalCharges" style="display: inline-block; margin-left: 10px;"><br>
-            
 
             <input type="submit" value="Submit" style="margin-top: 10px;">
-         
-            </form>
         </form>
     </div>
 </body>
