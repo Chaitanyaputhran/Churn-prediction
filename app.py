@@ -47,13 +47,13 @@ def predict():
     TotalCharges= float(request.form[' TotalCharges'])
 
     # Create a numpy array with the user input values
-    input_data = np.array([[age, systolic_bp, diastolic_bp, glucose, body_temp, heart_rate]])
+    input_data = np.array([[Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod , MonthlyCharges, TotalCharges]])
     
     # Use the trained model to make a prediction
     prediction = model.predict(input_data)
     
     # Return the predicted risk level to the user
-    return render_template('result.html', prediction_text='The predicted risk level is {}'.format(prediction[0]))
+    return render_template('result.html', prediction_text='THe churn is {}'.format(prediction[0]))
 
 if __name__ == '__main__':
     app.run(debug=True)
