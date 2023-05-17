@@ -28,7 +28,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get the user input from the form
-    Partner = str(request.form[' Partner'])
+    Partner = str(request.form['Partner'])
     Dependents = str(request.form['Dependents'])
     tenure= int(request.form['tenure'])
     PhoneService = str(request.form[ 'PhoneService' ])
@@ -38,13 +38,13 @@ def predict():
     OnlineBackup= str(request.form['OnlineBackup'])
     DeviceProtection= str(request.form['DeviceProtection'])
     TechSupport= str(request.form['TechSupport'])
-    StreamingTV= str(request.form[' StreamingTV'])
-    StreamingMovies= str(request.form[' StreamingMovies'])
-    Contract= str(request.form[' Contract'])
-    PaperlessBilling= str(request.form[' PaperlessBilling'])
-    PaymentMethod= str(request.form[' PaymentMethod'])
-    MonthlyCharges= float(request.form[' MonthlyCharges'])
-    TotalCharges= float(request.form[' TotalCharges'])
+    StreamingTV= str(request.form['StreamingTV'])
+    StreamingMovies= str(request.form['StreamingMovies'])
+    Contract= str(request.form['Contract'])
+    PaperlessBilling= str(request.form['PaperlessBilling'])
+    PaymentMethod= str(request.form['PaymentMethod'])
+    MonthlyCharges= float(request.form['MonthlyCharges'])
+    TotalCharges= float(request.form['TotalCharges'])
 
     # Create a numpy array with the user input values
     input_data = np.array([[Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod , MonthlyCharges, TotalCharges]])
