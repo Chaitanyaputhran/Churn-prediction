@@ -41,8 +41,10 @@ def predict():
     StreamingTV= str(request.form[' StreamingTV'])
     StreamingMovies= str(request.form[' StreamingMovies'])
     Contract= str(request.form[' Contract'])
-    PaperlessBilling= str(request.form[' Contract'])
-    
+    PaperlessBilling= str(request.form[' PaperlessBilling'])
+    PaymentMethod= str(request.form[' PaymentMethod'])
+    MonthlyCharges= float(request.form[' MonthlyCharges'])
+    TotalCharges= float(request.form[' TotalCharges'])
 
     # Create a numpy array with the user input values
     input_data = np.array([[age, systolic_bp, diastolic_bp, glucose, body_temp, heart_rate]])
