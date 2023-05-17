@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import preprocessing
@@ -49,9 +50,17 @@ df_cat = cat_features.apply(le.fit_transform)
 num_features = df[['TotalCharges', 'MonthlyCharges', 'tenure']]
 finaldf = pd.concat([num_features, df_cat], axis=1)
 
+# Assuming "Churn" is the target variable
+target_column = "Churn"
+y = le.fit_transform(df[target_column])
+
+# Save the LabelEncoder to a file
+with open('label_encoder.pkl', 'wb') as file:
+    pickle.dump(le, file)
+
+
 # Splitting into training and test sets
-X = finaldf.drop("Churn", axis=1)
-y = finaldf["Churn"]
+X = finaldf.drop(target_column, axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Training the Random Forest classifier

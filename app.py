@@ -1,12 +1,17 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import pickle
+from sklearn import preprocessing
 
 app = Flask(__name__)
 
 # Load the trained model
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
+
+# Load the label encoder
+with open('label_encoder.pkl', 'rb') as file:
+    le = pickle.load(file)
 
 @app.route('/')
 def home():
@@ -32,6 +37,8 @@ def predict():
     payment_method = request.form['PaymentMethod']
     monthly_charges = float(request.form['MonthlyCharges'])
     total_charges = float(request.form['TotalCharges'])
+
+    
 
     # Create a DataFrame with the user input
     input_data = pd.DataFrame({
