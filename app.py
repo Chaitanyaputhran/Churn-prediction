@@ -70,9 +70,9 @@ def predict():
     # Make prediction
     churn_prediction = model.predict(input_data_processed)
     if churn_prediction[0] == 1:
-        result = "Customer Is Likely to Churn."
+        result = "Customer Is Likely To Churn."
     else:
-        result = "Customer Is Likely to Stay."
+        result = "Customer Is Likely To Stay."
 
     return render_template('index.html', prediction=result)
 
