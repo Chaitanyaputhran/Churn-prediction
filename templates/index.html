@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Customer Churn Predictor</title>
+</head>
+<body>
+    <h1><center>Customer Churn Predictor</center></h1>
+    <p ><center>Please enter details:</center></p>
+
+    <div class="box">
+        <form action="/predict" method="POST">
+            <label for="Partner" style="display: inline-block;">Partner:</label>
+            <input type="text" id="Partner" name="Partner" style="display: inline-block; margin-left: 10px;" required>
+
+            <label for="Dependents" style="display: inline-block; margin-left: 10px;">Dependents:</label>
+            <input type="text" id="Dependents" name="Dependents" style="display: inline-block; margin-left: 10px;" required>
+
+            <label for="tenure" style="display: inline-block; margin-left: 10px;">Tenure:</label>
+            <input type="number" id="tenure" name="tenure" style="display: inline-block; margin-left: 10px;" required><br>
+            
+            <label for="PhoneService" style="display: inline-block;">PhoneService:</label>
+            <input type="text" id="PhoneService" name="PhoneService" style="display: inline-block; margin-left: 10px;">
+
+            <label for="MultipleLines" style="display: inline-block; margin-left: 10px;">MultipleLines:</label>
+            <input type="text" id="MultipleLines" name="MultipleLines" style="display: inline-block; margin-left: 10px;">
+
+            <label for="InternetService" style="display: inline-block; margin-left: 10px;">InternetService:</label>
+            <input type="text" id="InternetService" name="InternetService" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="OnlineSecurity" style="display: inline-block; margin-left: 10px;">OnlineSecurity:</label>
+            <input type="text" id="OnlineSecurity" name="OnlineSecurity" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="OnlineBackup" style="display: inline-block; margin-left: 10px;">OnlineBackup:</label>
+            <input type="text" id="OnlineBackup" name="OnlineBackup" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="DeviceProtection" style="display: inline-block; margin-left: 10px;">DeviceProtection:</label>
+            <input type="text" id="DeviceProtection" name="DeviceProtection" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="TechSupport" style="display: inline-block; margin-left: 10px;">TechSupport:</label>
+            <input type="text" id="TechSupport" name="TechSupport" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="StreamingTV" style="display: inline-block; margin-left: 10px;">StreamingTV:</label>
+            <input type="text" id="StreamingTV" name="StreamingTV" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="StreamingMovies" style="display: inline-block; margin-left: 10px;">StreamingMovies:</label>
+            <input type="text" id="StreamingMovies" name="StreamingMovies" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="Contract" style="display: inline-block; margin-left: 10px;">Contract:</label>
+            <input type="text" id="Contract" name="Contract" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="PaperlessBilling" style="display: inline-block; margin-left: 10px;">PaperlessBilling:</label>
+            <input type="text" id="PaperlessBilling" name="PaperlessBilling" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="PaymentMethod" style="display: inline-block; margin-left: 10px;">PaymentMethod:</label>
+            <input type="text" id="PaymentMethod" name="PaymentMethod" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="MonthlyCharges" style="display: inline-block; margin-left: 10px;">MonthlyCharges:</label>
+            <input type="number" id="MonthlyCharges" name="MonthlyCharges" style="display: inline-block; margin-left: 10px;"><br>
+            
+            <label for="TotalCharges" style="display: inline-block; margin-left: 10px;">TotalCharges:</label>
+            <input type="number" id="TotalCharges" name="TotalCharges" style="display: inline-block; margin-left: 10px;"><br>
+
+
+            <input type="submit" value="Submit" ">
+        </form>
+    </div>
+</body>
+</html>
