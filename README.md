@@ -50,7 +50,7 @@ The data exploration process involved analyzing the dataset to gain insights int
 
 ## Data Preprocessing
 
-Data preprocessing steps include handling missing values and encoding categorical variables. These steps are crucial for preparing the data for machine learning.
+Data preprocessing steps include handling missing values and encoding categorical variables. These steps are crucial for preparing the data for  machine learning.
 
 ## Model Training
 
